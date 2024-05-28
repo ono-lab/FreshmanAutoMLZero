@@ -48,5 +48,7 @@ MGG-AutoML-Zero+AV（提案手法）のプログラムの一部を穴埋めし�
 
 ## 提出物
 
+以下の 2 つを Slack で送ってください。
+
 - 穴埋めした`src/main/java/methods/MGG_AV/TMGGAutoMLZeroAV.java`ファイル
-- 提案手法を動かして見つかったアルゴリズムの分析結果（各行がどういう処理に対応しているか）
+- 提案手法で見つかったアルゴリズムの Predict 関数と Learn 関数の説明
