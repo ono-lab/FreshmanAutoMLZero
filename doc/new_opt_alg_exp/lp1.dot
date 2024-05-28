@@ -1,0 +1,14 @@
+digraph G {
+    s7 [label="+\nLP1, s7", shape=doublecircle];
+    s7_prev [label="LP1_prev\ns7_prev", shape=doublecircle];
+    s5 [label="*\ns5"];
+    s3 [label="LP3_prev\ns3_prev"];
+    s4 [label="-\ns4"];
+    
+    s7 -> s7_prev 
+    s7 -> s5
+    s5 -> s3
+    s5 -> s4
+    s4 -> s0
+    s4 -> s1
+}

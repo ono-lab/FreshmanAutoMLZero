@@ -1,0 +1,612 @@
+\documentclass[twocolumn, a4j]{jarticle}
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx]{color}
+\usepackage{ascmac}
+\usepackage{mathtools}
+\usepackage{comment}
+\usepackage{subfigure}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{setspace}
+\usepackage{multirow}
+\usepackage{lscape}
+\usepackage{fullpage}
+\usepackage{listings,jvlisting}
+\usepackage{bm}
+\lstset{
+  basicstyle={\ttfamily},
+  identifierstyle={\small},
+  commentstyle={\smallitshape},
+  keywordstyle={\small\boldsymbolseries},
+  ndkeywordstyle={\small},
+  stringstyle={\small\ttfamily},
+  frame={tb},
+  breaklines=true,
+  columns=[l]{fullflexible},
+  numbers=left,
+  xrightmargin=0zw,
+  xleftmargin=3zw,
+  numberstyle={\scriptsize},
+  stepnumber=1,
+  numbersep=1zw,
+  lineskip=-0.5ex
+}
+\renewcommand{\lstlistingname}{コード}
+\addtolength{\textheight}{\topskip}
+\setlength{\voffset}{-0.2in}
+\setlength{\topmargin}{0pt}
+\setlength{\headheight}{0pt}
+\setlength{\headsep}{0pt}
+\setstretch{0.85}
+\fboxsep=0pt
+\fboxrule=1pt
+\title{エリート個体解析 No. 2}
+\author{三嶋 隆史}
+\date{\today}
+\begin{document}
+\maketitle
+
+\begin{lstlisting}[caption= No. 0.1]
+Fitness:0.3066490347970486 
+def Setup():
+  v2[2] = -0.82822824
+  s3 = -0.25370400605489385
+  s3 = -0.12099375584357919
+  v1[2] = -0.77256215
+  v1[3] = 0.93998325
+
+def Predict():
+  s1 = dot(v0, v2)
+
+def Learn():
+  s3 = s0 - s0
+  v2 = v2 + v0
+  v2 = s3 * v2
+  v2 = s1 * v2
+
+\end{lstlisting}
+
+\begin{lstlisting}[caption= No. 0.2]
+Fitness:0.3066490347970486 
+def Setup():
+  s3 = -0.3077399692445961
+  v1[1] = 0.8629613
+  s3 = 0.6151515712935385
+  s1 = 0.23211969022067636
+  v1[1] = 0.5745878
+
+def Predict():
+  s1 = dot(v0, v2)
+
+def Learn():
+  s1 = s1 * s0
+  v1 = v2 + v1
+  v1 = v1 + v0
+  v2 = s1 * v1
+
+\end{lstlisting}
+
+\newpage
+
+\begin{lstlisting}[caption= No. 0.3]
+Fitness:0.3066490347970486 
+def Setup():
+  v1[2] = 0.3730595
+  s2 = -0.4458864557863311
+  v1[0] = 0.9351356
+  v1[0] = -0.7092756
+  s2 = -0.7850819037069694
+
+def Predict():
+  s1 = dot(v2, v0)
+
+def Learn():
+  s3 = s0 - s3
+  v1 = v2 + v0
+  v1 = s0 * v1
+  v2 = s1 * v1
+
+\end{lstlisting}
+
+\begin{lstlisting}[caption= No. 0.4]
+Fitness:0.3066490347970486 
+def Setup():
+  v1[2] = 0.7847903
+  s1 = -0.02690103111800002
+  s1 = 0.4855181614469042
+  s2 = 0.19656479258250448
+  s2 = -0.3017749369023226
+
+def Predict():
+  s1 = dot(v0, v2)
+
+def Learn():
+  v2 = v2 + v0
+  v1 = s0 * v2
+  v2 = s1 * v1
+  v1 = v2 + v0
+
+\end{lstlisting}
+
+\newpage
+
+\begin{lstlisting}[caption= No. 0.5]
+Fitness:0.3066490347970486 
+def Setup():
+  v2[3] = -0.15894485
+  s2 = 0.2197168333105055
+  s1 = -0.006318147388856277
+  v2[3] = 0.36487937
+  s3 = 0.9221870542355846
+
+def Predict():
+  s1 = dot(v1, v0)
+
+def Learn():
+  s3 = s1 * s0
+  v2 = v1 + v0
+  v1 = s3 * v2
+  v2 = s2 * v2
+
+\end{lstlisting}
+
+\begin{lstlisting}[caption= No. 0.6]
+Fitness:0.3066490347970486 
+def Setup():
+  s2 = 0.0583969661205761
+  s3 = 0.3807915480145825
+  v1[2] = 0.23732603
+  s1 = -0.26265328945935007
+  v1[0] = 0.37152112
+
+def Predict():
+  s1 = dot(v1, v0)
+
+def Learn():
+  s3 = s0 * s2
+  s1 = s3 * s1
+  v2 = v0 + v1
+  v1 = s1 * v2
+
+\end{lstlisting}
+
+\newpage
+
+\begin{lstlisting}[caption= No. 0.7]
+Fitness:0.3066490347970486 
+def Setup():
+  v1[1] = -0.083892465
+  v2[3] = 0.2758813
+  s2 = -0.9839936389314561
+  v1[2] = -0.2713939
+  v1[3] = -0.47466755
+
+def Predict():
+  s1 = dot(v1, v0)
+
+def Learn():
+  v2 = v0 + v1
+  s1 = s1 * s3
+  v1 = s1 * v2
+  v1 = s0 * v1
+
+\end{lstlisting}
+
+\begin{lstlisting}[caption= No. 0.8]
+Fitness:0.3066490347970486 
+def Setup():
+  v2[2] = 0.5286188
+  v2[2] = 0.48192084
+  v2[1] = -0.7629641
+  s2 = 0.6448334777440972
+  s3 = 0.9574434883012064
+
+def Predict():
+  s1 = dot(v0, v1)
+
+def Learn():
+  v2 = v1 + v0
+  s3 = s1 - s0
+  v1 = s1 * v2
+  v1 = s0 * v1
+
+\end{lstlisting}
+
+\newpage
+
+\begin{lstlisting}[caption= No. 0.9]
+Fitness:0.3066490347970486 
+def Setup():
+  v2[0] = -0.47390044
+  s2 = 0.6698606522937065
+  s2 = -0.48355126432443707
+  s2 = 0.49907322962225487
+  v2[3] = -0.7963817
+
+def Predict():
+  s1 = dot(v1, v0)
+
+def Learn():
+  v1 = v0 + v1
+  v2 = v0 + v1
+  s1 = s0 * s1
+  v1 = s1 * v2
+
+\end{lstlisting}
+
+\begin{lstlisting}[caption= No. 0.10]
+Fitness:0.3066490347970486 
+def Setup():
+  v2[0] = -0.29172504
+  s2 = -0.31451704563482097
+  s1 = 0.9468134832584909
+  s3 = -0.5896318257810935
+  v2[1] = 0.35443377
+
+def Predict():
+  s1 = dot(v1, v0)
+
+def Learn():
+  v1 = v0 + v1
+  v2 = s1 * v1
+  v1 = v2 + v2
+  v1 = s0 * v1
+
+\end{lstlisting}
+
+\newpage
+
+\begin{lstlisting}[caption= No. 0.11]
+Fitness:0.3066490347970486 
+def Setup():
+  s1 = -0.6210634217290301
+  v2[1] = -0.34914446
+  s1 = 0.6530071541390858
+  v2[2] = -0.95949197
+  v2[0] = 0.7295662
+
+def Predict():
+  s1 = dot(v1, v0)
+
+def Learn():
+  s2 = s2 - s2
+  v1 = v1 + v0
+  s1 = s0 * s1
+  v1 = s1 * v1
+
+\end{lstlisting}
+
+\begin{lstlisting}[caption= No. 0.12]
+Fitness:0.3066490347970486 
+def Setup():
+  v1[1] = -0.1624018
+  s3 = 0.4070970220676977
+  s3 = -0.37060407314014454
+  s3 = -0.288966556659473
+  s1 = 0.8630172344000318
+
+def Predict():
+  s1 = dot(v0, v2)
+
+def Learn():
+  s3 = s0 * s1
+  v1 = s3 * v0
+  v2 = v2 + v1
+  s2 = s2 - s1
+
+\end{lstlisting}
+
+\newpage
+
+\begin{lstlisting}[caption= No. 0.13]
+Fitness:0.3066490347970486 
+def Setup():
+  s2 = 0.9308833569111135
+  s3 = 0.7157932975265484
+  v1[2] = -0.08855426
+  s1 = 0.2912919038109951
+  v1[0] = 0.9462178
+
+def Predict():
+  s1 = dot(v2, v0)
+
+def Learn():
+  v1 = v0 + v2
+  s3 = s1 * s0
+  v1 = s3 * v1
+  v2 = s1 * v1
+
+\end{lstlisting}
+
+\begin{lstlisting}[caption= No. 0.14]
+Fitness:0.3066490347970486 
+def Setup():
+  v1[3] = -0.69298565
+  v1[3] = -0.92669225
+  s2 = -0.9276483421957538
+  s3 = 0.39791319356484856
+  s2 = 0.8783388647472203
+
+def Predict():
+  s1 = dot(v2, v0)
+
+def Learn():
+  s3 = s1 - s2
+  v1 = s0 * v2
+  v2 = v0 + v1
+  v2 = s1 * v2
+
+\end{lstlisting}
+
+\newpage
+
+\begin{lstlisting}[caption= No. 0.15]
+Fitness:0.3066490347970486 
+def Setup():
+  s3 = -0.11818717229862141
+  s1 = 0.9303641815632455
+  s3 = 0.09356438174719295
+  s1 = 0.1421750536513997
+  s3 = -0.5747143510502719
+
+def Predict():
+  s1 = dot(v1, v0)
+
+def Learn():
+  v2 = s0 * v1
+  v2 = v2 + v0
+  v1 = v2 + v1
+  v1 = s1 * v1
+
+\end{lstlisting}
+
+\begin{lstlisting}[caption= No. 0.16]
+Fitness:0.3066490347970486 
+def Setup():
+  v1[3] = -0.79783285
+  v1[0] = 0.5706737
+  s2 = -0.905576811775733
+  v1[1] = -0.555714
+  s3 = -0.609925251952524
+
+def Predict():
+  s1 = dot(v2, v0)
+
+def Learn():
+  v1 = s1 * v0
+  s2 = s1 * s3
+  v1 = v2 + v1
+  v2 = s0 * v1
+
+\end{lstlisting}
+
+\newpage
+
+\begin{lstlisting}[caption= No. 0.17]
+Fitness:0.3066490347970486 
+def Setup():
+  s1 = 0.18396454366771708
+  s2 = 0.4716450556234022
+  s1 = 0.46530326398764466
+  s1 = 0.5887095119786778
+  s3 = 0.9001380155414347
+
+def Predict():
+  s1 = dot(v1, v0)
+
+def Learn():
+  v2 = s0 * v0
+  v2 = v1 + v2
+  v1 = s1 * v2
+  v2 = s0 * v1
+
+\end{lstlisting}
+
+\begin{lstlisting}[caption= No. 0.18]
+Fitness:0.3066490347970486 
+def Setup():
+  s3 = 0.22888086739499602
+  v1[0] = -0.8627224
+  s3 = 0.2711376346224612
+  s3 = -0.36778965774805794
+  s2 = -0.16094788726433773
+
+def Predict():
+  s1 = dot(v2, v0)
+
+def Learn():
+  s3 = s1 * s0
+  v1 = s3 * v0
+  s3 = s2 - s1
+  v2 = v2 + v1
+
+\end{lstlisting}
+
+\newpage
+
+\begin{lstlisting}[caption= No. 0.19]
+Fitness:0.3066490347970486 
+def Setup():
+  s2 = -0.4782056343428287
+  s2 = 0.5066891659983812
+  v1[3] = -0.5668272
+  v1[0] = -0.1292504
+  v1[0] = 0.13013756
+
+def Predict():
+  s1 = dot(v0, v2)
+
+def Learn():
+  v1 = s2 * v2
+  v2 = s0 * v1
+  v1 = v2 + v0
+  v2 = s1 * v1
+
+\end{lstlisting}
+
+\begin{lstlisting}[caption= No. 0.20]
+Fitness:0.3066490347970486 
+def Setup():
+  s3 = -0.6129456348301301
+  s3 = -0.8569919269044937
+  v1[1] = -0.4569193
+  s3 = -0.9641695504086487
+  s3 = -0.5406486496212226
+
+def Predict():
+  s1 = dot(v0, v2)
+
+def Learn():
+  s2 = s1 * s0
+  v1 = v0 + v1
+  v2 = v0 + v2
+  v2 = s2 * v2
+
+\end{lstlisting}
+
+\newpage
+
+\begin{lstlisting}[caption= No. 0.21]
+Fitness:0.3066490347970486 
+def Setup():
+  v1[1] = -0.04789877
+  v1[3] = 0.83008516
+  s1 = 0.41970110081839596
+  v1[1] = 0.9195039
+  v1[0] = 0.75259256
+
+def Predict():
+  s1 = dot(v0, v2)
+
+def Learn():
+  v1 = v2 + v1
+  v1 = v0 + v1
+  v2 = s1 * v1
+  v2 = s0 * v2
+
+\end{lstlisting}
+
+\begin{lstlisting}[caption= No. 0.22]
+Fitness:0.3066490347970486 
+def Setup():
+  v2[3] = -0.47734237
+  s2 = -0.7177794435095719
+  s3 = 0.2019169396932805
+  s3 = 0.14154381641294078
+  s3 = 0.4866907230266053
+
+def Predict():
+  s1 = dot(v0, v1)
+
+def Learn():
+  v2 = v1 + v0
+  v1 = v2 + v2
+  v2 = s0 * v2
+  v1 = s1 * v2
+
+\end{lstlisting}
+
+\newpage
+
+\begin{lstlisting}[caption= No. 0.23]
+Fitness:0.3066490347970486 
+def Setup():
+  v1[3] = -0.6259682
+  v1[2] = -0.76264656
+  v1[3] = 0.06924081
+  s2 = -0.03282643777585692
+  s1 = 0.4285980615096412
+
+def Predict():
+  s1 = dot(v2, v0)
+
+def Learn():
+  v1 = s3 * v0
+  s1 = s0 - s1
+  v1 = v2 + v1
+  v2 = s1 * v1
+
+\end{lstlisting}
+
+\begin{lstlisting}[caption= No. 0.24]
+Fitness:0.3066490347970486 
+def Setup():
+  v1[3] = -0.6380991
+  s1 = 0.4727574246293569
+  v1[2] = 0.6525092
+  v2[1] = -0.863327
+  v2[1] = -0.67484534
+
+def Predict():
+  s1 = dot(v1, v0)
+
+def Learn():
+  v1 = v1 + v0
+  v1 = s0 * v1
+  s3 = s3 * s1
+  v1 = s3 * v1
+
+\end{lstlisting}
+
+\newpage
+
+\begin{lstlisting}[caption= No. 0.25]
+Fitness:0.3066490347970486 
+def Setup():
+  s1 = 0.8238123624771316
+  s1 = -0.9331667161582768
+  s3 = -0.0467049117011511
+  v1[1] = 0.29366076
+  v2[3] = -0.8666278
+
+def Predict():
+  s1 = dot(v0, v2)
+
+def Learn():
+  v2 = s0 * v2
+  v2 = v2 + v0
+  v1 = s2 * v2
+  v2 = s1 * v1
+
+\end{lstlisting}
+
+\begin{lstlisting}[caption= No. 0.26]
+Fitness:0.3066490347970486 
+def Setup():
+  v1[2] = 0.94913864
+  v1[3] = 0.54074955
+  v1[0] = -0.6595746
+  s2 = 0.694314925350132
+  s1 = -0.4647746433524156
+
+def Predict():
+  s1 = dot(v0, v2)
+
+def Learn():
+  v2 = v2 + v0
+  s2 = s0 - s2
+  s2 = s0 * s1
+  v2 = s2 * v2
+
+\end{lstlisting}
+
+\newpage
+
+\begin{lstlisting}[caption= No. 0.27]
+Fitness:0.3066490347970486 
+def Setup():
+  v1[3] = 0.89187515
+  v1[2] = 0.9409554
+  s2 = -0.18939695607359086
+  s1 = 0.8509697283178022
+  s1 = 0.32345016779109814
+
+def Predict():
+  s1 = dot(v0, v2)
+
+def Learn():
+  v2 = v2 + v0
+  s2 = s1 - s0
+  v2 = s2 * 

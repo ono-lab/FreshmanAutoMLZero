@@ -1,0 +1,17 @@
+digraph G {
+    v6 [label="+\nLP2, v6", shape=doublecircle];
+    v6_prev [label="LP2_prev\nv6_prev", shape=doublecircle];
+    v3 [label="*\nv3"];
+    s6 [label="*\ns6"];
+    s3 [label="LP3_prev\ns3_prev"];
+    s4 [label="-\ns4"];
+    
+    v6 -> v6_prev
+    v6 -> v3
+    v3 -> s6
+    v3 -> v0
+    s6 -> s3
+    s6 -> s4
+    s4 -> s0
+    s4 -> s1
+}

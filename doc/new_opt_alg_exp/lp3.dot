@@ -1,0 +1,7 @@
+digraph G {
+    s3 [label="*\nLP3, s3"];
+    s3_prev [label="LP3_prev\ns3_prev"];
+    s2 [label="Const\ns2"];
+    s3 -> s3_prev
+    s3 -> s2
+}

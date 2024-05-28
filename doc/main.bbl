@@ -1,0 +1,83 @@
+\begin{thebibliography}{10}
+
+\bibitem{Alet_2020}
+Ferran Alet, Martin~F. Schneider, Tomas Lozano-Perez, and Leslie~Pack Kaelbling.
+\newblock Meta-learning curiosity algorithms.
+\newblock In {\em International Conference on Learning Representations}, 2020.
+
+\bibitem{Andrychowicz_2016}
+Marcin Andrychowicz, Misha Denil, Sergio Gomez, Matthew~W Hoffman, David Pfau, Tom Schaul, Brendan Shillingford, and Nando De~Freitas.
+\newblock Learning to learn by gradient descent by gradient descent.
+\newblock {\em Advances in neural information processing systems}, Vol.~29, pp. 3981--3989, 2016.
+
+\bibitem{Cubuk_2019}
+Ekin~D. Cubuk, Barret Zoph, Dandelion Mane, Vijay Vasudevan, and Quoc~V. Le.
+\newblock Autoaugment: Learning augmentation strategies from data.
+\newblock In {\em Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, June 2019.
+
+\bibitem{Elsken_2019}
+Thomas Elsken, Jan~Hendrik Metzen, and Frank Hutter.
+\newblock Neural architecture search: A survey.
+\newblock {\em The Journal of Machine Learning Research}, Vol.~20, No.~1, pp. 1997--2017, 2019.
+
+\bibitem{Fahlman_1989}
+Scott Fahlman and Christian Lebiere.
+\newblock The cascade-correlation learning architecture.
+\newblock {\em Advances in neural information processing systems}, Vol.~2, pp. 524--532, 1989.
+
+\bibitem{Finn_2017}
+Chelsea Finn, Pieter Abbeel, and Sergey Levine.
+\newblock Model-agnostic meta-learning for fast adaptation of deep networks.
+\newblock In {\em International conference on machine learning}, pp. 1126--1135. PMLR, 2017.
+
+\bibitem{Hutter_2011}
+Frank Hutter, Holger~H Hoos, and Kevin Leyton-Brown.
+\newblock Sequential model-based optimization for general algorithm configuration.
+\newblock In {\em Learning and Intelligent Optimization: 5th International Conference, LION 5, Rome, Italy, January 17-21, 2011. Selected Papers 5}, pp. 507--523. Springer, 2011.
+
+\bibitem{Yang_2019}
+Yash Mehta, Colin White, Arber Zela, Arjun Krishnakumar, Guri Zabergja, Shakiba Moradian, Mahmoud Safari, Kaicheng Yu, and Frank Hutter.
+\newblock {NAS}-bench-suite: {NAS} evaluation is (now) surprisingly easy.
+\newblock In {\em International Conference on Learning Representations}, 2022.
+
+\bibitem{Negrinho_2019}
+Renato Negrinho, Matthew Gormley, Geoffrey~J Gordon, Darshan Patil, Nghia Le, and Daniel Ferreira.
+\newblock Towards modular and programmable architecture search.
+\newblock {\em Advances in neural information processing systems}, Vol.~32, pp. 524--532, 2019.
+
+\bibitem{Real_2019}
+Esteban Real, Alok Aggarwal, Yanping Huang, and Quoc~V Le.
+\newblock Regularized evolution for image classifier architecture search.
+\newblock In {\em Proceedings of the aaai conference on artificial intelligence}, Vol.~33, pp. 4780--4789, 2019.
+
+\bibitem{automl_zero}
+Esteban Real, Chen Liang, David So, and Quoc Le.
+\newblock Automl-zero: Evolving machine learning algorithms from scratch.
+\newblock In {\em International Conference on Machine Learning}, pp. 8007--8019. PMLR, 2020.
+
+\bibitem{mgg}
+Hiroshi Sato.
+\newblock A new generation alternation model of genetic algorithms and its assessment.
+\newblock {\em Transactions of the Japanese Society for Artificial Intelligence}, Vol.~12, No.~2, pp. 82--91, 1997.
+
+\bibitem{So_2019}
+David So, Quoc Le, and Chen Liang.
+\newblock The evolved transformer.
+\newblock In {\em International conference on machine learning}, pp. 5877--5886. PMLR, 2019.
+
+\bibitem{Tan_2019}
+Mingxing Tan, Bo~Chen, Ruoming Pang, Vijay Vasudevan, Mark Sandler, Andrew Howard, and Quoc~V Le.
+\newblock Mnasnet: Platform-aware neural architecture search for mobile.
+\newblock In {\em Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pp. 2820--2828, 2019.
+
+\bibitem{Zoph_2016}
+Barret Zoph and Quoc Le.
+\newblock Neural architecture search with reinforcement learning.
+\newblock 2017.
+
+\bibitem{Zoph_2018}
+Barret Zoph, Vijay Vasudevan, Jonathon Shlens, and Quoc~V Le.
+\newblock Learning transferable architectures for scalable image recognition.
+\newblock In {\em Proceedings of the IEEE conference on computer vision and pattern recognition}, pp. 8697--8710, 2018.
+
+\end{thebibliography}

@@ -1,0 +1,85 @@
+{
+  // IntelliSense を使用して利用可能な属性を学べます。
+  // 既存の属性の説明をホバーして表示します。
+  // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "TLinearRegressionExperiment",
+      "request": "launch",
+      "mainClass": "methods.RE.TLinearRegressionExperiment",
+      "projectName": "RyujiMishimaResearch"
+    },
+    {
+      "type": "java",
+      "name": "TLinearRegressionExperiment",
+      "request": "launch",
+      "mainClass": "methods.MGG_AV.TLinearRegressionExperiment",
+      "projectName": "RyujiMishimaResearch"
+    },
+    {
+      "type": "java",
+      "name": "TAffineRegressionExperiment",
+      "request": "launch",
+      "mainClass": "experiments.automl_zero_mgg_vag_0513.TAffineRegressionExperiment",
+      "projectName": "RyujiMishimaResearch"
+    },
+    {
+      "type": "java",
+      "name": "TAlgorithmMutator",
+      "request": "launch",
+      "mainClass": "automl_zero_mgg_vag_0513.TAlgorithmMutator",
+      "projectName": "RyujiMishimaResearch"
+    },
+    {
+      "type": "java",
+      "name": "TLinearRegressionExperiment",
+      "request": "launch",
+      "mainClass": "experiments.automl_zero_mgg_vag_0513.TLinearRegressionExperiment",
+      "projectName": "RyujiMishimaResearch"
+    },
+    {
+      "type": "java",
+      "name": "Launch TLinearRegressionExperiment",
+      "request": "launch",
+      "mainClass": "experiments.automl_zero_mgg_crossover_1124.TLinearRegressionExperiment",
+      "projectName": "ResearchMishima"
+    },
+    {
+      "type": "java",
+      "name": "Launch TLinearRegressionExperiment",
+      "request": "launch",
+      "mainClass": "experiments.automl_zero_mgg_1124.TLinearRegressionExperiment",
+      "projectName": "ResearchMishima"
+    },
+    {
+      "type": "java",
+      "name": "Launch TLinearRegressionExperiment",
+      "request": "launch",
+      "mainClass": "experiments.automl_zero_mgg.TLinearRegressionExperiment",
+      "projectName": "ResearchMishima"
+    },
+    {
+      "type": "java",
+      "name": "Launch TDemoExperiment",
+      "request": "launch",
+      "mainClass": "experiments.automl_zero.TDemoExperiment",
+      "projectName": "ResearchMishima"
+    },
+    {
+      "type": "java",
+      "name": "Launch TLinearRegressionExperiment",
+      "request": "launch",
+      "mainClass": "experiments.automl_zero.TLinearRegressionExperiment",
+      "projectName": "ResearchMishima"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "automl_zero.Main",
+      "projectName": "ResearchMishima"
+    }
+  ]
+}

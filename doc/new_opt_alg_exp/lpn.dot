@@ -1,0 +1,16 @@
+digraph G {
+    lp1 [label="LP1\ns7", shape=doublecircle];
+    lp2 [label="LP2\nv6", shape=doublecircle];
+    lp3 [label="LP3\ns3"];
+    lp1 -> lp3
+    lp2 -> lp3
+    lp1 -> lp1
+    lp2 -> lp2
+    lp3 -> lp3
+    lp1 -> s0
+    lp1 -> s1
+    lp1 -> v0
+    lp2 -> s0
+    lp2 -> s1
+    lp2 -> v0
+}

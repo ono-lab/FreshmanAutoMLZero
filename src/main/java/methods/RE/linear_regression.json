@@ -1,0 +1,84 @@
+{
+  "searchTasksSeed": 50,
+  "searchTaskSpecs": [
+    {
+      "@class": "task_factory.spec.TScalarLinearRegressionTaskSpec",
+      "featuresSize": 4,
+      "numOfTrainExamples": 100,
+      "numOfValidExamples": 100,
+      "numOfTasks": 10,
+      "evalMethod": "RMS_ERROR"
+    }
+  ],
+  "selectTasksSeed": 100,
+  "selectTaskSpecs": [
+    {
+      "@class": "task_factory.spec.TScalarLinearRegressionTaskSpec",
+      "featuresSize": 4,
+      "numOfTrainExamples": 1000,
+      "numOfValidExamples": 100,
+      "numOfTasks": 100,
+      "evalMethod": "RMS_ERROR"
+    }
+  ],
+  "finalTaskSpecs": [
+    {
+      "@class": "task_factory.spec.TScalarLinearRegressionTaskSpec",
+      "featuresSize": 4,
+      "numOfTrainExamples": 10000,
+      "numOfValidExamples": 100,
+      "numOfTasks": 100,
+      "evalMethod": "RMS_ERROR",
+      "dataSeeds": [1000000],
+      "paramSeeds": [2000000]
+    }
+  ],
+  "searchSeed": 20,
+  "selectSeed": 40,
+  "finalSeed": 60,
+  "numOfScalarAddresses": 4,
+  "numOfVectorAddresses": 3,
+  "numOfMatrixAddresses": 1,
+  "setupOps": ["SCALAR_CONST_SET_OP", "VECTOR_CONST_SET_OP"],
+  "predictOps": ["VECTOR_INNER_PRODUCT_OP"],
+  "learnOps": [
+    "SCALAR_DIFF_OP",
+    "SCALAR_PRODUCT_OP",
+    "SCALAR_VECTOR_PRODUCT_OP",
+    "VECTOR_SUM_OP"
+  ],
+  "populationSize": 1200,
+  "tournamentSize": 10,
+  "initModel": {
+    "@class": "models.TRandomModel",
+    "setupInitSize": 5,
+    "predictInitSize": 1,
+    "learnInitSize": 4,
+    "setupOps": ["SCALAR_CONST_SET_OP", "VECTOR_CONST_SET_OP"],
+    "predictOps": ["VECTOR_INNER_PRODUCT_OP"],
+    "learnOps": [
+      "SCALAR_DIFF_OP",
+      "SCALAR_PRODUCT_OP",
+      "SCALAR_VECTOR_PRODUCT_OP",
+      "VECTOR_SUM_OP"
+    ],
+    "seed": 1000
+  },
+  "mutateProb": 0.9,
+  "allowedMutations": [
+    "ALTER_PARAM",
+    "RANDOMIZE_INSTRUCTION",
+    "RANDOMIZE_COMPONENT"
+  ],
+  "FECSpec": {
+    "numOfTrainExamples": 10,
+    "numOfValidExamples": 10
+  },
+  "fitnessCombinationMode": "MEAN",
+  "maxNumOfExperiments": 1,
+  "initialNumOfExperiments": 1,
+  "maxNumOfEvaluations": 50000,
+  "progressEvery": 100,
+  "randomizeTaskSeeds": true,
+  "logFilePrefix": "linear_regression_"
+}
