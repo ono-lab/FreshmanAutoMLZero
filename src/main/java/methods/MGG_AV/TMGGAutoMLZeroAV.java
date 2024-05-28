@@ -278,13 +278,12 @@ public class TMGGAutoMLZeroAV {
       fEvaluator.incrementFECGeneration();
 
       // TODO: 集団からランダムに親個体を2つ取り出す
-      // ここにコードを書く
-      TIndividual parent1 = fPopulation.randomRemove(fRand);
-      TIndividual parent2 = fPopulation.randomRemove(fRand);
+      // 以下のコードを書く
+      // TIndividual parent1 =
+      // TIndividual parent2 =
 
       // TODO: 子個体を生成し評価値の上位2つを集団に追加する
       // ここにコードを書く
-      addBest2ChildrenOf(parent1, parent2);
 
       fGeneration++;
       if (fNumOfEvaluatedIndividuals >= fNumOfEvaluatedIndividualsLastProgress + fProgressEvery) {
